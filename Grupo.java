@@ -14,18 +14,21 @@ public class Grupo
     {
         for(int i = 0; i < estudiantes.length; i+=1)
         {
-                estudiantes[i] = unEstudiante;
+                if(estudiantes[i] == null)
+                {
+                    estudiantes[i] = unEstudiante;
+                    i=estudiantes.length+1;
+                }
         }
     }
     
-    //Cacer otro metodo: dar de baja(int claveEstudiante) de tarea.
+    //hacer otro metodo: daDeBaja(int claveEstudiante) de tarea.
     public void darDeBaja(int claveEstudiante)
     {
-        //Buscar el estudiante con la clave
-        //y asignarle un null
+        //Buscar el estudiante con la clave y asignarle un null
         for(int i=0; i < estudiantes.length; i++)
         {
-            if(estudiantes[i].clave == claveEstudiante)
+            if(estudiantes[i].dimeLaClave() == claveEstudiante)
             {
                 estudiantes[i] = null;
             }

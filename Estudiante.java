@@ -9,6 +9,11 @@ public class Estudiante
         clave = claveIni;
     }
     
+    public int dimeLaClave()
+    {
+        return clave;
+    }
+    
     public String dimeDetalles()
     {
         return "Clave: " +clave+ ", Nombre: " +nombre;
