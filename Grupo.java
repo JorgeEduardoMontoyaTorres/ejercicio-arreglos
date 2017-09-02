@@ -1,8 +1,17 @@
+/**
+ * Clase Grupo, donde el objeto grupo almacenara los objetos estudiantes.
+ */
 public class Grupo
 {
     private String nomMateria;
     private Estudiante[] estudiantes;
     
+    /**
+     * Costructor:
+     * Inicializa las variables de instancia.
+     * @param totalEstudiantes Numero total de los estudiantes en el grupo.
+     * @param nombMateria Nombre asignado a la materia.
+     */
     public Grupo(int totalEstudiantes, String nombMateria)
     {
         estudiantes = new Estudiante[totalEstudiantes];
@@ -69,6 +78,10 @@ public class Grupo
     }
     
     //hacer otro metodo: daDeBaja(int claveEstudiante) de tarea.
+    /**
+     * Se da de baja al alumo del grupo y de la materia.
+     * @param claveEstudiante Entra la clave del estudiante que se desea dar de baja.
+     */
     public void darDeBaja(int claveEstudiante)
     {
         //Buscar el estudiante con la clave y asignarle un null
